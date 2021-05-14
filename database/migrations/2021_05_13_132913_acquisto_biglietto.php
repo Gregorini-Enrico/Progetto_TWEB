@@ -12,8 +12,8 @@ class AcquistoBiglietto extends Migration
         Schema::create('acquisto_biglietto', function(Blueprint $table){
             //$table->integer('id_utente')->references('id')->on('account');
             //$table->integer('codice_evento')->references('codice_evento')->on('evento');
-            $table->bigInteger('id_utente')->unsigned()->index();
-            $table->integer('codice_evento')->index();
+            $table->bigInteger('id_utente')->references('id')->on('account')->unsigned()->index();
+            $table->integer('codice_evento')->references('codice_evento')->on('evento')->index();
             $table->integer('n_biglietti');
             $table->date('data_acquisto');
         });
