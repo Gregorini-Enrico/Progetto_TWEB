@@ -1,0 +1,67 @@
+
+
+.w3-button-evento{
+	
+	display: inline-block;
+	padding: 8px 16px;
+	vertical-align: middle;
+	overflow: hidden;
+	text-decoration: none;
+	background-color: #000000;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 12px 24px;
+	border: 1px solid #ccc;
+	color: white;
+	float: right;
+	margin: 5px 5px 10px 5px;
+	white-space: black;
+	
+}
+
+.w3-button-evento:hover {
+	background-color: #ffffff;
+	color: black;
+}
+
+
+
+.w3-main-content {
+    padding: 5px 10px;
+    margin: 5px 10px;
+}
+
+.w3-events-img {
+    display: inline-block;
+}
+
+.w3-img-event {
+    width: 12em;
+    height: 12em;
+}
+
+.w3-events-div {
+    display: inline-block;
+    /*float: right;*/
+}
+
+.w3-events-descr {
+    display: block;
+}
+
+.w3-map{
+    display: inline-block;
+}
+
+.w3-iframe {
+    width: 500px;
+    height: 250px;
+    display: inline-block;
+}
+
+.w3-info {
+	margin-right: 50px;
+    display: inline-block;
+    float: right;
+}

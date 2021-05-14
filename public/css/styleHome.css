@@ -1,0 +1,123 @@
+
+/*CSS SEARCHBOX*/
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+.wrapper{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background: #858888;
+    max-width: 1000px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.wrapper .input {
+    width: 20%;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.searchbtn {
+    background: #ffec00;
+    width: 5%;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.searchbtn .fas{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+
+
+
+/*CSS DIVS*/
+
+.w3-chisiamo {
+	background: #b3ffb3;
+	margin-top: 10px;
+        margin-bottom: 10px;
+	height: 300px;
+        border-radius: 15px 50px 30px;
+}
+
+.w3-cosafacciamo {
+	background: #ffc2b3;
+	margin-top: 10px;
+        margin-bottom: 20px;
+	height: 300px;
+        border-radius: 15px 50px 30px;
+}
+
+.w3-eventirecenti {
+  display: flex;
+  justify-content: space-around;
+}
+
+.botton-home{
+	
+	padding: 8px 16px;
+	overflow: hidden;
+	text-decoration: none;
+	background-color: #000000;
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 12px 24px;
+	border: 1px solid #ccc;
+	color: white;
+	margin: 5px 5px 10px 5px;
+	white-space: black;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top:400px
+}
+
+.botton-home:hover {
+	background-color: #ffffff;
+	color: black;
+}
+
+.w3-box {
+  background: #ffff;
+  flex: 0 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 15px 15px #888888;
+  margin-bottom: 30px;
+}
+
+.w3-image{
+    width: 30em;
+    height: 30em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+
+
+
+
+
+
+
