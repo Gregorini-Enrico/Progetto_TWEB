@@ -14,11 +14,11 @@
         
         <!-- Title -->
         <div> 
-		<a href="#">  <img alt="" class="logoClass" src="{{asset('/images/logo_univpm.png')}}"> </a> 
+		<a href="{{ route('Homepage') }}">  <img alt="" class="logoClass" src="{{asset('/images/logo_univpm.png')}}"> </a> 
                 <h1 class = "logoTitle"> DGGG Events </h1>
         </div>
         
-        <!-- Navbar -->
+        <!-- Navbar 
         <div class="topnav">
             <a  href="#home">Home</a>
             <a href="#news">News</a>
@@ -28,7 +28,8 @@
                 <a href="#search">Login</a>
                 <a href="#about">Registrati</a>
             </div>
-	</div>
+	</div> -->
+        @yield('navbar')
         
         @yield('content')
         <!-- Footer -->

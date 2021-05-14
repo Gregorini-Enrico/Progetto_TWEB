@@ -8,6 +8,18 @@
 
 @section('title', 'Catalogo Eventi')
 
+@section('navbar')
+<!-- BARRA DI NAVIGAZIONE -->
+        <div class="topnav">
+            <a href="{{ route('FullCatalog') }}">Catalogo</a>
+            <a href="#faq">FAQ</a>
+            <div class="topnav-right">
+                <a href="#search">Login</a>
+                <a href="#about">Registrati</a>
+            </div>
+	</div>
+@endsection
+
 <!-- Inizio elenco degli eventi -->
 @section('content')
 <!--barra di ricerca -->
