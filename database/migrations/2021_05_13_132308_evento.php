@@ -20,8 +20,9 @@ class Evento extends Migration
             $table->integer('sconto');
             $table->float('costo_biglietto');
             $table->integer('num_biglietti');
-            $table->integer('giorni_sconto');
-            $table->bigInteger('id_user3')->references('id')->on('account')->unsigned()->index();
+            $table->date('data_inizio_sconto');
+            $table->bigInteger('id_user3')->index()->unsigned();
+            $table->foreign('id_user3')->references('id')->on('account');
         });
     }
 

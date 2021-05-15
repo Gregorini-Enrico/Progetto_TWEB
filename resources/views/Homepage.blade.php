@@ -8,7 +8,7 @@
 <!-- BARRA DI NAVIGAZIONE -->
 	<div class="topnav">
 		<a href="{{ route('FullCatalog') }}">Catalogo</a>
-		<a href="#contact">FAQ</a>
+		<a href="{{ route('FAQ') }}">FAQ</a>
 		<div class="topnav-right">
 			<a href="#search">Login</a>
 			<a href="#about">Registrati</a>

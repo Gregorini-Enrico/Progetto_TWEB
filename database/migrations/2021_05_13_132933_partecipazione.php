@@ -10,8 +10,10 @@ class Partecipazione extends Migration
     public function up()
     {
         Schema::create('partecipazione', function(Blueprint $table){
-            $table->bigInteger('id_utente')->references('id')->on('account')->unsigned()->index();
-            $table->integer('codice_evento')->references('codice_evento')->on('evento')->index();
+            $table->bigInteger('id_utente')->unsigned()->index();
+            $table->integer('codice_evento')->index();
+            $table->foreign('id_utente')->references('id')->on('account');
+            $table->foreign('codice_evento')->references('codice_evento')->on('evento');
         });
     }
 

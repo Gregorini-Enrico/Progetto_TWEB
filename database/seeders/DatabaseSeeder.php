@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
             ['id' => 1, 'domanda' => 'Come posso acquistare biglietti?', 'risposta' => 'Accedi al catalogo, scegli l\'evento che più ti interessa e dopodichè clicca acquista.'], 
             ['id' => 2, 'domanda' => 'Come posso registrarmi al sito?', 'risposta' => 'Clicca dalla barra di navigazione in alto a destra il pulsante registrati e compila il form di registrazione.'],
             ['id' => 3, 'domanda' => 'Posso acquistare più biglietti contemporaneamente?', 'risposta' => 'Si, certo!'],
-            ['id' => 4, 'domanda' => 'Posso mandare a cagare Cucchiarelli che mi fa scrivere a mano questi dati inutili?', 'risposta' => 'Certamente anzi, DEVI!']
+            ['id' => 4, 'domanda' => 'Posso filtrare gli eventi in base alla società?', 'risposta' => 'Certamente!']
         ]);
     }
 }
