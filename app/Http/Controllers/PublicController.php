@@ -16,7 +16,12 @@ class PublicController extends Controller{
     public function showFullCatalog() {
         $events = $this->PublicModel->getEvents();
         $societies = $this->PublicModel->getSocieties();
-        return view('catalogo')->with('eventi', $events)->with('societies', $societies);
+        
+        //Aggiunta lettura da db di anno e mese
+        $anni = $this->PublicModel->getYears();
+        $mesi = $this->PublicModel->getMonths();
+        
+        return view('catalogo')->with('eventi', $events)->with('societies', $societies) ->with('years', $anni) ->with('months', $mesi);
     }
 
     public function showFAQ(){
