@@ -8,18 +8,6 @@
 
 @section('title', 'Catalogo Eventi')
 
-@section('navbar')
-<!-- BARRA DI NAVIGAZIONE -->
-        <div class="topnav">
-            <a href="{{ route('FullCatalog') }}">Catalogo</a>
-            <a href="#faq">FAQ</a>
-            <div class="topnav-right">
-                <a href="#search">Login</a>
-                <a href="#about">Registrati</a>
-            </div>
-	</div>
-@endsection
-
 <!-- Inizio elenco degli eventi -->
 @section('content')
 <!--barra di ricerca -->
@@ -97,7 +85,11 @@
             </div>
             <div class="w3-container">
 		<p>{{$evento->descrizione}}</p>
-		<p><button class="w3-button "><b>DETTAGLI EVENTO</b></button></p>
+		<p>
+                    <button class="w3-button">
+                        <a href="{{ route('DettagliEvento', [$evento->codice_evento]) }}"> <b>DETTAGLI EVENTO</b>  </a>
+                    </button>
+                </p>
             </div>
 	</div>
     </div>
