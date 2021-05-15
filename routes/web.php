@@ -17,12 +17,10 @@ Route::get('/', function () {
     return view('Homepage');
 })->name('Homepage');
 
-/*Route::get('/layout', function() {
-    return view('evento'); 
-})->name('DettagliEvento');*/
-
 Route::get('/catalog', 'App\Http\Controllers\PublicController@showFullCatalog')
         ->name('FullCatalog');
 
 Route::get('/faq', 'App\Http\Controllers\PublicController@showFAQ')
         ->name('FAQ');
+
+Route::get('/catalog/event/{eventId}', 'App\Http\Controllers\PublicController@showEvent')->name('DettagliEvento');
