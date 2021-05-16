@@ -7,17 +7,6 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 @endsection
 
-@section('navbar')
-    <div class="topnav">
-            <a href="{{ route('FullCatalog') }}">Catalogo</a>
-            <a href="#faq">FAQ</a>
-            <div class="topnav-right">
-                <a href="#search">Login</a>
-                <a href="#about">Registrati</a>
-            </div>
-	</div>
-@endsection
-
 @section('content')
         <script>
 

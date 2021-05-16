@@ -8,18 +8,6 @@
 
 @section('title', 'Catalogo Eventi')
 
-@section('navbar')
-<!-- BARRA DI NAVIGAZIONE -->
-        <div class="topnav">
-            <a href="{{ route('FullCatalog') }}">Catalogo</a>
-            <a href="#faq">FAQ</a>
-            <div class="topnav-right">
-                <a href="#search">Login</a>
-                <a href="#about">Registrati</a>
-            </div>
-	</div>
-@endsection
-
 <!-- Inizio elenco degli eventi -->
 @section('content')
 <!--barra di ricerca -->
@@ -27,7 +15,7 @@
     <!--<input type="text" class="input" placeholder="GG/MM/AAAA"> &nbsp&nbsp -->
 	<select class="input">
                 <option value="" hidden><B>MESE</B></option>
-                <option value="gen">01</option>
+                <!--<option value="gen">01</option>
                 <option value="feb">02</option>
                 <option value="mar">03</option>
 		<option value="apr">04</option>
@@ -38,15 +26,25 @@
 		<option value="set">09</option>
                 <option value="ott">10</option>
 		<option value="nov">11</option>
-		<option value="dic">12</option>
+		<option value="dic">12</option>-->
+                @isset($months)
+                @foreach($months as $m)
+		<option value="{{$m}}">{{$m}}</option>
+                @endforeach
+                @endisset
 	</select> &nbsp&nbsp
 	<select class="input">
 		<option value="" hidden><B>ANNO</B></option>
-		<option value="2021">2021</option>
+		<!--<option value="2021">2021</option>
 		<option value="2022">2022</option>
 		<option value="2023">2023</option>
 		<option value="2024">2024</option>
-		<option value="2025">2025</option>
+		<option value="2025">2025</option>-->
+                @isset($years)
+                @foreach($years as $a)
+		<option value="{{$a}}">{{$a}}</option>
+                @endforeach
+                @endisset 
 	</select> &nbsp&nbsp
 	<input type="text" class="input" placeholder="Descrizione"> &nbsp&nbsp
 	<select class="input">
@@ -97,7 +95,11 @@
             </div>
             <div class="w3-container">
 		<p>{{$evento->descrizione}}</p>
-		<p><button class="w3-button "><b>DETTAGLI EVENTO</b></button></p>
+		<p>
+                    <button class="w3-button">
+                        <a href="{{ route('DettagliEvento', [$evento->codice_evento]) }}"> <b>DETTAGLI EVENTO</b>  </a>
+                    </button>
+                </p>
             </div>
 	</div>
     </div>

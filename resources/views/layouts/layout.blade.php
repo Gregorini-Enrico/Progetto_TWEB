@@ -29,7 +29,7 @@
                 <a href="#about">Registrati</a>
             </div>
 	</div> -->
-        @yield('navbar')
+        @include('layouts\PublicNavbar')
         
         @yield('content')
         <!-- Footer -->

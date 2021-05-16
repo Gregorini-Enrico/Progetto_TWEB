@@ -4,18 +4,6 @@
 <link rel="stylesheet" href="{{asset('css/styleHome.css')}}">
 @endsection
 
-@section('navbar')
-<!-- BARRA DI NAVIGAZIONE -->
-	<div class="topnav">
-		<a href="{{ route('FullCatalog') }}">Catalogo</a>
-		<a href="{{ route('FAQ') }}">FAQ</a>
-		<div class="topnav-right">
-			<a href="#search">Login</a>
-			<a href="#about">Registrati</a>
-		</div>
-	</div>
-@endsection
-
 <!-- Inizio elenco degli eventi -->
 @section('content')
 <div>
@@ -24,23 +12,27 @@
 	</h2>
 	<br>
 </div>
+@isset($events)
 <div class="w3-eventirecenti">
 	<div class="w3-box">
-		<img class="w3-image" src="{{asset('/images/rkomi.png')}}">
-		<h2>Evento x</h2>
-		<p>Description 1</p>
+		<img class="w3-image" src="{{asset('/images/'.$events[0]->immagine)}}">
+		<h2>Evento: {{$events[0]->titolo}}</h2>
+                <p>Data evento: <b>{{$events[0]->data}}</b></p>
 	</div>
 	<p>
-		<button class="botton-home"> 
-			<b> Vai al catalogo </b>
-		</button>
-	</p> 
+                <a href="{{ route('FullCatalog') }}">
+                    <button class="botton-home"> 
+                        <b> Vai al catalogo </b>
+                    </button>
+                </a>
+        </p> 
 	<div class="w3-box">
-		<img class="w3-image" src="{{asset('/images/rkomi.png')}}">
-                <h2>Evento y</h2>
-		<p>Description 2 <br>with special line</p>
-	</div>    
+                <img class="w3-image" src="{{asset('/images/'.$events[1]->immagine)}}">
+                <h2>Evento: {{$events[1]->titolo}}</h2>
+                <p>Data evento: <b>{{$events[1]->data}}</b></p>
+        </div>    
 </div>
+@endisset
 <div class="w3-chisiamo">
 	<h2> CHI SIAMO </h2>
 </div>
