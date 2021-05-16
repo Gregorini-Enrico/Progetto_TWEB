@@ -14,6 +14,7 @@
 <div class="wrapper">
     <!--<input type="text" class="input" placeholder="GG/MM/AAAA"> &nbsp&nbsp -->
 	<select class="input">
+            
                 <option value="" hidden><B>MESE</B></option>
                 <!--<option value="gen">01</option>
                 <option value="feb">02</option>
@@ -26,25 +27,25 @@
 		<option value="set">09</option>
                 <option value="ott">10</option>
 		<option value="nov">11</option>
-		<option value="dic">12</option>-->
+		<option value="dic">12</option> -->
                 @isset($months)
                 @foreach($months as $m)
 		<option value="{{$m}}">{{$m}}</option>
                 @endforeach
-                @endisset
+                @endisset  
 	</select> &nbsp&nbsp
 	<select class="input">
 		<option value="" hidden><B>ANNO</B></option>
-		<!--<option value="2021">2021</option>
+                <!--<option value="2021">2021</option>
 		<option value="2022">2022</option>
 		<option value="2023">2023</option>
 		<option value="2024">2024</option>
-		<option value="2025">2025</option>-->
+		<option value="2025">2025</option> -->
                 @isset($years)
                 @foreach($years as $a)
 		<option value="{{$a}}">{{$a}}</option>
                 @endforeach
-                @endisset 
+                @endisset    
 	</select> &nbsp&nbsp
 	<input type="text" class="input" placeholder="Descrizione"> &nbsp&nbsp
 	<select class="input">

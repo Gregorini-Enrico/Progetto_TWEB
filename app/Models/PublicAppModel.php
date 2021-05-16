@@ -22,6 +22,7 @@ class PublicAppModel{
             
             //$month=date("F",$this->data);
             $year=(explode("-", $e->data))[0];
+            Log::debug($year);
             foreach ($anni as $y){
                 if ($year == $y){
                     $find = true;
@@ -35,6 +36,7 @@ class PublicAppModel{
         }
         return $anni;
     }
+
     
     public function getMonths(){
         $events = Evento::all();
@@ -45,6 +47,7 @@ class PublicAppModel{
           
             //$month=date("F",$this->data);
             $month=(explode("-", $e->data))[1];
+            Log::debug($month);
             foreach ($mesi as $m){
                 if ($month == $m){
                     $find = true;
@@ -56,9 +59,11 @@ class PublicAppModel{
                     $i = $i + 1;    
             }
         }
+        Log::debug($mesi);
         return $mesi;
     }
-    
+        
+   
     public function getSocieties(){
         return Account::where('livello', 3)->get();
     }
