@@ -62,6 +62,31 @@ class PublicAppModel{
         Log::debug($mesi);
         return $mesi;
     }
+    
+    public function getRegion() {
+        $events = Evento::all();
+        $i = 0;
+        $regions = [];
+        foreach ($events as $e){
+            $find = false;
+          
+            //$month=date("F",$this->data);
+            $region= $e->regione;
+            Log::debug($region);
+            foreach ($regions as $m){
+                if ($region == $m){
+                    $find = true;
+                    break;
+                }
+            }
+            if ($find == false){
+                    $regions[$i] = $region;
+                    $i = $i + 1;    
+            }
+        }
+        Log::debug($regions);
+        return $regions;
+    }
         
    
     public function getSocieties(){
@@ -73,7 +98,6 @@ class PublicAppModel{
     }
     
     public function getEvent($eventId){
-        Log::debug($eventId);
         return Evento::where('codice_evento', $eventId)->first();
     }
     

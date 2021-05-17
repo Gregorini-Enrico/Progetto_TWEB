@@ -20,8 +20,9 @@ class PublicController extends Controller{
         //Aggiunta lettura da db di anno e mese
         $anni = $this->PublicModel->getYears();
         $mesi = $this->PublicModel->getMonths();
+        $regioni = $this->PublicModel->getRegion();
         
-        return view('catalogo')->with('eventi', $events)->with('societies', $societies) ->with('years', $anni) ->with('months', $mesi);
+        return view('catalogo') ->with('eventi', $events) ->with('societies', $societies) ->with('years', $anni) ->with('months', $mesi) ->with("regions", $regioni);
     }
 
     public function showFAQ(){
@@ -34,7 +35,7 @@ class PublicController extends Controller{
         return view('evento')->with('event', $event);
     }
     
-    public function showEventHome(){
+     public function showEventHome(){
         $event = $this->PublicModel->getEventHome();
         return view('Homepage') -> with('events', $event);
     }
